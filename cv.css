@@ -51,11 +51,7 @@ body {
 .cv-nav-portfolio {
   font-weight: 650 !important;
   color: #ffffff !important;
-}
-
-.cv-nav-sep {
-  color: var(--text-muted);
-  user-select: none;
+  letter-spacing: 0.01em;
 }
 
 .page {
@@ -109,32 +105,12 @@ body {
   border-right: 1px solid var(--line);
 }
 
-.photo-wrap {
-  padding: 1.5rem 1.5rem 1.25rem;
-  background: rgba(0, 0, 0, 0.18);
-  border-bottom: 1px solid var(--line-sidebar);
+.sidebar-top {
+  padding-top: 0.35rem;
 }
 
-.photo {
-  width: 100%;
-  aspect-ratio: 4 / 4.6;
-  border-radius: 6px;
-  object-fit: cover;
-  display: block;
-  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
-  border: 2px solid rgba(96, 165, 250, 0.35);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-}
-
-.photo.initials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Playfair Display", Georgia, serif;
-  font-size: 3.4rem;
-  font-weight: 700;
-  color: #dbeafe;
-  letter-spacing: 0.04em;
+.sidebar-top section:first-child {
+  padding-top: 1.35rem;
 }
 
 .sidebar section {
@@ -354,8 +330,7 @@ a.contact-item:hover { color: var(--accent-light); }
   .sidebar,
   .main-header,
   .section-bar,
-  .contact-footer,
-  .photo-wrap {
+  .contact-footer {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -365,8 +340,6 @@ a.contact-item:hover { color: var(--accent-light); }
   .cv-body { grid-template-columns: 1fr; }
 
   .sidebar { border-right: none; border-bottom: 1px solid var(--line); }
-
-  .photo-wrap { max-width: 220px; margin: 0 auto; }
 
   .main-header,
   .main-content { padding-left: 1.25rem; padding-right: 1.25rem; }
