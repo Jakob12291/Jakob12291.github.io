@@ -6,196 +6,7 @@
   <title>CV – Jakob Daoud</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --ink: #2a2f33;
-      --muted: #6b7280;
-      --accent: #5c7a6a;
-      --accent-soft: #e8efe9;
-      --line: #e3ded6;
-      --paper: #fffcf9;
-      --bg: #f6f4f0;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: "Inter", "Segoe UI", system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.55;
-      padding: 2rem 1rem;
-    }
-
-    .topbar {
-      max-width: 820px;
-      margin: 0 auto 0.75rem;
-      text-align: center;
-      font-size: 0.82rem;
-      color: var(--muted);
-    }
-
-    .topbar a { color: var(--accent); font-weight: 500; }
-
-    .page {
-      max-width: 820px;
-      margin: 0 auto;
-      background: var(--paper);
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    header {
-      background: #f3f6f3;
-      border-bottom: 1px solid var(--line);
-      padding: 2.25rem 2.5rem 2rem;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      font-weight: 650;
-      letter-spacing: -0.02em;
-      margin-bottom: 0.3rem;
-      color: var(--ink);
-    }
-
-    header .title {
-      font-size: 1rem;
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-    }
-
-    header .subtitle {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 1.1rem;
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem 1.25rem;
-      font-size: 0.86rem;
-      color: #4b5563;
-    }
-
-    .contact a { color: var(--accent); text-decoration: none; }
-    .contact a:hover { text-decoration: underline; }
-
-    main {
-      display: grid;
-      grid-template-columns: 1fr 250px;
-    }
-
-    .primary { padding: 1.85rem 2rem 2.25rem 2.5rem; }
-    .sidebar {
-      background: #faf9f6;
-      border-left: 1px solid var(--line);
-      padding: 1.85rem 1.5rem 2.25rem;
-    }
-
-    section { margin-bottom: 1.65rem; }
-    section:last-child { margin-bottom: 0; }
-
-    h2 {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      color: var(--accent);
-      font-weight: 650;
-      margin-bottom: 0.85rem;
-      padding-bottom: 0.35rem;
-      border-bottom: 1px solid var(--accent-soft);
-    }
-
-    .profile { font-size: 0.93rem; color: #4b5563; }
-
-    .entry { margin-bottom: 1.2rem; }
-    .entry:last-child { margin-bottom: 0; }
-
-    .entry-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 0.15rem;
-    }
-
-    .entry h3 { font-size: 0.95rem; font-weight: 650; }
-    .entry .org { font-size: 0.86rem; color: var(--muted); }
-    .entry .date { font-size: 0.78rem; color: var(--muted); white-space: nowrap; }
-
-    .entry ul {
-      margin-top: 0.35rem;
-      padding-left: 1.1rem;
-      font-size: 0.88rem;
-      color: #4b5563;
-    }
-
-    .entry li { margin-bottom: 0.15rem; }
-
-    .tag-group { margin-bottom: 1rem; }
-    .tag-group h3 {
-      font-size: 0.78rem;
-      font-weight: 650;
-      margin-bottom: 0.4rem;
-      color: var(--ink);
-    }
-
-    .tags { display: flex; flex-wrap: wrap; gap: 0.3rem; }
-
-    .tag {
-      background: var(--accent-soft);
-      border: 1px solid #d5e0d8;
-      color: #465c50;
-      font-size: 0.72rem;
-      padding: 0.18rem 0.5rem;
-      border-radius: 999px;
-    }
-
-    .lang-item {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.86rem;
-      margin-bottom: 0.35rem;
-      color: #4b5563;
-    }
-
-    .lang-item span:last-child { color: var(--muted); font-size: 0.78rem; }
-
-    .hobby, .ref-note {
-      font-size: 0.84rem;
-      color: var(--muted);
-      line-height: 1.55;
-    }
-
-    .ref-note { font-style: italic; }
-
-    .highlight-box {
-      background: var(--accent-soft);
-      border: 1px solid #d5e0d8;
-      border-radius: 8px;
-      padding: 0.75rem 0.9rem;
-      font-size: 0.88rem;
-      color: #465c50;
-      margin-top: 0.5rem;
-    }
-
-    @media print {
-      body { background: white; padding: 0; }
-      .topbar { display: none; }
-      .page { border: none; border-radius: 0; box-shadow: none; }
-    }
-
-    @media (max-width: 700px) {
-      main { grid-template-columns: 1fr; }
-      .sidebar { border-left: none; border-top: 1px solid var(--line); }
-      header, .primary, .sidebar { padding-left: 1.35rem; padding-right: 1.35rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="cv.css" />
 </head>
 <body>
   <p class="topbar"><a href="index.html">← Portfolio</a> · <a href="https://github.com/Jakob12291">GitHub</a></p>
@@ -223,7 +34,7 @@
             webbapplikationer med C#, ASP.NET Core, React och MVC, och är van vid att arbeta i team –
             min största styrka är att samarbeta och ta ansvar tillsammans med andra.
           </p>
-          <p class="profile" style="margin-top:0.65rem;">
+          <p class="profile">
             Jag är <strong>mycket duktig med AI</strong> och använder det effektivt i utveckling,
             felsökning och problemlösning. Söker en junior roll inom IT där jag kan växa som utvecklare.
             Portfolio: <strong>jakob12291.github.io</strong>
@@ -232,7 +43,6 @@
 
         <section>
           <h2>Utbildning</h2>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -248,7 +58,6 @@
               <li>Fullstack-projekt: REST API, databaser, MVC-webb och SPA</li>
             </ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -262,7 +71,6 @@
               <li>Avbröt studierna i januari 2024</li>
             </ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -273,7 +81,6 @@
             </div>
             <ul><li>Utbildning inom fullstack-utveckling</li></ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -291,7 +98,6 @@
 
         <section>
           <h2>Arbetslivserfarenhet</h2>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -307,7 +113,6 @@
               <li>Praktisk erfarenhet av teknik, system och problemlösning i industrimiljö</li>
             </ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -321,7 +126,6 @@
               <li>Stödde vid matlagning vid behov</li>
             </ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -330,11 +134,8 @@
               </div>
               <div class="date">Mar 2020 – Aug 2020</div>
             </div>
-            <ul>
-              <li>Proffs- och normalkassa, hjälpte till i olika avdelningar</li>
-            </ul>
+            <ul><li>Proffs- och normalkassa, hjälpte till i olika avdelningar</li></ul>
           </div>
-
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -343,9 +144,7 @@
               </div>
               <div class="date">Maj 2018 – Jan 2020</div>
             </div>
-            <ul>
-              <li>Kassaansvar, städning och gruppledarskap</li>
-            </ul>
+            <ul><li>Kassaansvar, städning och gruppledarskap</li></ul>
           </div>
         </section>
       </div>
@@ -379,34 +178,26 @@
             </div>
           </div>
         </section>
-
         <section>
           <h2>Övrigt</h2>
           <div class="tags">
-            <span class="tag">Robotsystem</span>
-            <span class="tag">IT-automation</span>
-            <span class="tag">Git / GitHub</span>
-            <span class="tag">Kreativ problemlösning</span>
-            <span class="tag">Teamarbete</span>
-            <span class="tag">IT mjukvara &amp; hårdvara</span>
+            <span class="tag">Robotsystem</span><span class="tag">IT-automation</span>
+            <span class="tag">Git / GitHub</span><span class="tag">Kreativ problemlösning</span>
+            <span class="tag">Teamarbete</span><span class="tag">IT mjukvara &amp; hårdvara</span>
           </div>
         </section>
-
         <section>
           <h2>Språk</h2>
           <div class="lang-item"><span>Svenska</span><span>Modersmål</span></div>
           <div class="lang-item"><span>Engelska</span><span>God nivå</span></div>
         </section>
-
         <section>
           <h2>Intressen</h2>
           <p class="hobby">
             Styrketräning, idrott och IT-utveckling. Programmerar på fritiden med egna webb-
             och appprojekt. Tidigare basketspelare i JKS med ansvar som andrahandstränare.
-            Gillar att prova nya sporter och friluftsaktiviteter.
           </p>
         </section>
-
         <section>
           <h2>Referenser</h2>
           <p class="ref-note">Lämnas gärna på begäran.</p>

@@ -3,10 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Jakob Daoud – Nyexaminerad .NET-utvecklare. Portfolio och CV." />
   <title>Jakob Daoud | .NET-utvecklare</title>
+  <meta name="description" content="Portfolio och CV – Jakob Daoud, nyexaminerad .NET-utvecklare." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -24,13 +23,12 @@
   </nav>
 
   <header class="hero">
-    <p class="hero-label">Nyexaminerad · Söker IT-jobb</p>
+    <span class="hero-badge">Nyexaminerad · Söker IT-jobb</span>
     <h1>Jakob Daoud</h1>
     <p class="hero-sub">.NET-utvecklare · Backend &amp; Frontend · AI</p>
     <p class="hero-text">
       Nyexaminerad från Chas Academy med erfarenhet av fullstack-utveckling i C#, ASP.NET Core och React.
-      Van vid att arbeta i team, lösa problem kreativt och använda AI som verktyg i utvecklingsprocessen.
-      Har dessutom flera års erfarenhet från industri med robotsystem och IT-automation på Lantchips.
+      Mycket duktig med AI som verktyg i utveckling. Erfarenhet från Lantchips med robotsystem och IT-automation.
     </p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#projekt">Mina projekt</a>
@@ -38,30 +36,29 @@
     </div>
   </header>
 
-  <section id="om" class="section section-alt">
+  <section id="om" class="section section-soft">
     <div class="container">
       <h2 class="section-title">Om mig</h2>
       <div class="about-grid">
         <div class="about-text">
           <p>
-            Jag är en motiverad och nyexaminerad .NET-utvecklare som söker min första roll inom IT.
-            Min största styrka är att jobba i grupp – jag trivs med ansvar, samarbete och att lära mig nya saker.
+            Motiverad .NET-utvecklare som söker min första roll inom IT. Min största styrka
+            är att jobba i grupp – jag trivs med ansvar, samarbete och nya utmaningar.
           </p>
           <p>
-            Utbildad vid <strong>Chas Academy Globen</strong> (2024–2027) där jag byggt REST API:er, MVC-webb
-            och React-appar. Jag är <strong>mycket duktig med AI</strong> och använder det effektivt i kodning,
-            felsökning och projektutveckling.
+            Utbildad vid <strong>Chas Academy Globen</strong> (2024–2027). Jag är
+            <strong>mycket duktig med AI</strong> och använder det effektivt i kodning och felsökning.
           </p>
           <p>
-            Parallellt har jag jobbat på <strong>Lantchips AB sedan 2019</strong>, där jag bland annat arbetat med
-            robotsystem, IT-automation och produktionssystem – erfarenhet som gett mig förståelse för teknik i praktiken.
+            Jobbar på <strong>Lantchips AB sedan 2019</strong> med robotsystem, IT-automation
+            och produktionssystem – parallellt med att söka IT-jobb.
           </p>
         </div>
-        <div class="about-facts">
-          <div class="fact"><span>Status</span><strong>Nyexaminerad · Söker jobb</strong></div>
-          <div class="fact"><span>Utbildning</span><strong>Chas Academy – .NET</strong></div>
-          <div class="fact"><span>Arbete</span><strong>Lantchips AB (2019–)</strong></div>
-          <div class="fact"><span>Portfolio</span><strong>github.com/Jakob12291</strong></div>
+        <div class="about-cards">
+          <div class="card"><div class="card-label">Status</div><div class="card-value">Nyexaminerad</div></div>
+          <div class="card"><div class="card-label">Utbildning</div><div class="card-value">Chas Academy – .NET</div></div>
+          <div class="card"><div class="card-label">GitHub</div><div class="card-value">github.com/Jakob12291</div></div>
+          <div class="card"><div class="card-label">E-post</div><div class="card-value">jakobi1206@hotmail.com</div></div>
         </div>
       </div>
     </div>
@@ -89,27 +86,26 @@
           <h3>AI &amp; Verktyg</h3>
           <div class="tags">
             <span>AI-assisterad utveckling</span><span>Git/GitHub</span>
-            <span>Visual Studio</span><span>VS Code</span><span>Swagger</span>
+            <span>Visual Studio</span><span>VS Code</span>
           </div>
         </div>
         <div class="skill-card">
           <h3>Industri / IT</h3>
           <div class="tags">
             <span>Robotsystem</span><span>IT-automation</span><span>Produktionssystem</span>
-            <span>IT mjukvara &amp; hårdvara</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="projekt" class="section section-alt">
+  <section id="projekt" class="section section-soft">
     <div class="container">
       <h2 class="section-title">Projekt</h2>
-      <p class="section-lead">Utvalda projekt från utbildningen – se alla på GitHub.</p>
+      <p class="section-lead">Utvalda projekt från utbildningen.</p>
       <div class="projects">
         <article class="project-card featured">
-          <div class="project-badge">Fullstack · Examensprojekt</div>
+          <span class="project-tag">Fullstack</span>
           <h3>Smakbordet – Restaurangsystem</h3>
           <p>REST API, MVC-admin och React SPA med JWT, databas och bokningslogik.</p>
           <div class="tags">
@@ -122,7 +118,7 @@
           </div>
         </article>
         <article class="project-card">
-          <div class="project-badge">Praktik</div>
+          <span class="project-tag">Praktik</span>
           <h3>HomeBuddy AB</h3>
           <p>E-handel med Next.js och ASP.NET Core API.</p>
           <a class="project-link" href="https://github.com/Jakob12291/HomeBuddyAb" target="_blank" rel="noopener">GitHub →</a>
@@ -138,10 +134,10 @@
   </section>
 
   <section id="kontakt" class="section">
-    <div class="container contact-box">
+    <div class="container contact-wrap">
       <h2 class="section-title">Kontakt</h2>
-      <p>Öppen för junior .NET-roller, praktik och traineetjänster inom IT.</p>
-      <div class="contact-links">
+      <p>Öppen för junior .NET-roller och traineetjänster inom IT.</p>
+      <div class="contact-row">
         <a href="mailto:jakobi1206@hotmail.com">jakobi1206@hotmail.com</a>
         <a href="tel:+46760435885">076-043 58 85</a>
         <a href="https://github.com/Jakob12291" target="_blank" rel="noopener">GitHub</a>
