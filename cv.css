@@ -25,21 +25,38 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.topbar {
+.cv-nav {
   max-width: 900px;
-  margin: 0 auto 0.75rem;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  margin: 0 auto 0.85rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.6rem;
+  padding: 0.65rem 1rem;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+  border-radius: 6px;
+  font-size: 0.84rem;
 }
 
-.topbar a {
+.cv-nav a {
   color: var(--accent-light);
   text-decoration: none;
   font-weight: 500;
 }
 
-.topbar a:hover { text-decoration: underline; }
+.cv-nav a:hover { text-decoration: underline; }
+
+.cv-nav-portfolio {
+  font-weight: 650 !important;
+  color: #ffffff !important;
+}
+
+.cv-nav-sep {
+  color: var(--text-muted);
+  user-select: none;
+}
 
 .page {
   max-width: 900px;
@@ -51,10 +68,38 @@ body {
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
+.page-2 {
+  margin-top: 0.5rem;
+}
+
 .cv-body {
   display: grid;
   grid-template-columns: 290px 1fr;
-  min-height: 780px;
+}
+
+.sidebar-mini {
+  padding: 1.35rem 1.5rem 0.5rem;
+  border-bottom: 1px solid var(--line-sidebar);
+  margin-bottom: 0.25rem;
+}
+
+.sidebar-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.sidebar-role {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.main-content-top {
+  padding-top: 1.75rem;
 }
 
 /* ── Sidebar ── */
@@ -113,8 +158,6 @@ body {
   color: var(--text-soft);
   line-height: 1.55;
 }
-
-.sidebar p strong { color: #ffffff; }
 
 .sidebar ul {
   list-style: none;
@@ -234,7 +277,13 @@ body {
 }
 
 .entry li { margin-bottom: 0.18rem; }
-.entry li strong { color: #dbeafe; font-weight: 600; }
+
+.entry,
+.sidebar section,
+.section-bar {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
 
 /* ── Footer ── */
 .contact-footer {
@@ -275,18 +324,31 @@ a.contact-item:hover { color: var(--accent-light); }
 
 /* ── Print / PDF ── */
 @media print {
+  @page {
+    size: A4;
+    margin: 10mm;
+  }
+
   body {
     background: white;
     padding: 0;
   }
 
-  .topbar { display: none; }
+  .cv-nav { display: none; }
 
   .page {
     max-width: none;
     border: none;
     border-radius: 0;
     box-shadow: none;
+    break-after: page;
+    page-break-after: always;
+  }
+
+  .page-2 {
+    margin-top: 0;
+    break-after: auto;
+    page-break-after: auto;
   }
 
   .sidebar,
