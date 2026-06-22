@@ -4,24 +4,211 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV – Jakob Daoud</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="cv.css" />
+  <style>
+    :root {
+      --ink: #1a1f2e;
+      --muted: #5c6478;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --line: #e5e7ef;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: #f3f4f8;
+      color: var(--ink);
+      line-height: 1.55;
+      padding: 2rem 1rem;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--paper);
+      box-shadow: 0 12px 40px rgba(26, 31, 46, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+      color: white;
+      padding: 2.5rem 2.75rem 2rem;
+    }
+
+    header h1 {
+      font-size: 2.15rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    header .title {
+      font-size: 1.05rem;
+      opacity: 0.92;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      font-size: 0.92rem;
+      opacity: 0.95;
+    }
+
+    .contact span { display: flex; align-items: center; gap: 0.35rem; }
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 0;
+    }
+
+    .primary { padding: 2rem 2.25rem 2.5rem 2.75rem; }
+    .sidebar {
+      background: #f8f9fc;
+      border-left: 1px solid var(--line);
+      padding: 2rem 1.75rem 2.5rem;
+    }
+
+    section { margin-bottom: 1.85rem; }
+    section:last-child { margin-bottom: 0; }
+
+    h2 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+
+    .profile {
+      font-size: 0.97rem;
+      color: var(--muted);
+    }
+
+    .entry { margin-bottom: 1.35rem; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.2rem;
+    }
+
+    .entry h3 {
+      font-size: 1rem;
+      font-weight: 650;
+      color: var(--ink);
+    }
+
+    .entry .org {
+      font-size: 0.92rem;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .entry .date {
+      font-size: 0.82rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .entry ul {
+      margin-top: 0.45rem;
+      padding-left: 1.15rem;
+      font-size: 0.92rem;
+      color: #3d4455;
+    }
+
+    .entry li { margin-bottom: 0.2rem; }
+
+    .tag-group { margin-bottom: 1.1rem; }
+    .tag-group:last-child { margin-bottom: 0; }
+
+    .tag-group h3 {
+      font-size: 0.82rem;
+      font-weight: 650;
+      color: var(--ink);
+      margin-bottom: 0.45rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      background: white;
+      border: 1px solid var(--line);
+      color: #374151;
+      font-size: 0.78rem;
+      padding: 0.22rem 0.55rem;
+      border-radius: 999px;
+    }
+
+    .sidebar h2 { font-size: 0.68rem; }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+      color: #3d4455;
+    }
+
+    .lang-item span:last-child {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .hobby {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .ref-note {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    @media print {
+      body { background: white; padding: 0; }
+      .page { box-shadow: none; border-radius: 0; max-width: 100%; }
+    }
+
+    @media (max-width: 700px) {
+      main { grid-template-columns: 1fr; }
+      .sidebar { border-left: none; border-top: 1px solid var(--line); }
+      header, .primary, .sidebar { padding-left: 1.5rem; padding-right: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
-  <p class="topbar"><a href="index.html">← Portfolio</a> · <a href="https://github.com/Jakob12291">GitHub</a></p>
-
   <div class="page">
     <header>
       <h1>Jakob Daoud</h1>
-      <p class="title">.NET-utvecklare · Nyexaminerad</p>
-      <p class="subtitle">Backend &amp; Frontend · AI · Söker roll inom IT</p>
+      <p class="title">.NET-utvecklare · Fullstack (Backend &amp; Frontend)</p>
       <div class="contact">
         <span>Lugnetsväg 13, 145 72 Norsborg</span>
         <span>076-043 58 85</span>
         <span>jakobi1206@hotmail.com</span>
-        <span><a href="https://github.com/Jakob12291">github.com/Jakob12291</a></span>
-        <span><a href="https://jakob12291.github.io">jakob12291.github.io</a></span>
+        <span><a href="https://github.com/Jakob12291" style="color:white;">github.com/Jakob12291</a></span>
+        <span><a href="https://jakob12291.github.io" style="color:white;">jakob12291.github.io</a></span>
       </div>
     </header>
 
@@ -30,19 +217,17 @@
         <section>
           <h2>Profil</h2>
           <p class="profile">
-            Nyexaminerad .NET-utvecklare med kompetens inom backend och frontend. Jag bygger
-            webbapplikationer med C#, ASP.NET Core, React och MVC, och är van vid att arbeta i team –
-            min största styrka är att samarbeta och ta ansvar tillsammans med andra.
-          </p>
-          <p class="profile">
-            Jag är <strong>mycket duktig med AI</strong> och använder det effektivt i utveckling,
-            felsökning och problemlösning. Söker en junior roll inom IT där jag kan växa som utvecklare.
-            Portfolio: <strong>jakob12291.github.io</strong>
+            Nyexaminerad .NET-utvecklare med erfarenhet av både backend och frontend.
+            Jag bygger webbapplikationer med C#, ASP.NET Core och moderna gränssnitt i React och MVC.
+            Van att ta ansvar, samarbeta i team och leverera strukturerad, läsbar kod.
+            Söker en roll där jag kan utvecklas vidare som utvecklare och bidra med teknisk kompetens och driv.
+            Portfolio och projekt: <strong>jakob12291.github.io</strong>
           </p>
         </section>
 
         <section>
           <h2>Utbildning</h2>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -53,11 +238,12 @@
             </div>
             <ul>
               <li>Utbildning slutförd – .NET-utvecklare</li>
-              <li>Backend: C#, ASP.NET Core, Web API, Entity Framework, SQL Server, JWT</li>
-              <li>Frontend: React, HTML, CSS, JavaScript, Bootstrap, ASP.NET MVC</li>
-              <li>Fullstack-projekt: REST API, databaser, MVC-webb och SPA</li>
+              <li>Backend: C#, ASP.NET Core, Web API, Entity Framework, SQL Server, autentisering (JWT)</li>
+              <li>Frontend: React, HTML, CSS, JavaScript, Bootstrap samt ASP.NET MVC</li>
+              <li>Projektarbete med REST API, databaser, MVC-webb och SPA-lösningar</li>
             </ul>
           </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -67,10 +253,11 @@
               <div class="date">Sep 2023 – Jan 2024</div>
             </div>
             <ul>
-              <li>Webbutveckling med fokus på .NET</li>
+              <li>Studerade webbutveckling med fokus på .NET-plattformen</li>
               <li>Avbröt studierna i januari 2024</li>
             </ul>
           </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -79,8 +266,11 @@
               </div>
               <div class="date">Sep 2020 – Maj 2023</div>
             </div>
-            <ul><li>Utbildning inom fullstack-utveckling</li></ul>
+            <ul>
+              <li>Utbildning inom fullstack-utveckling</li>
+            </ul>
           </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -90,42 +280,29 @@
               <div class="date">Sep 2017 – Maj 2020</div>
             </div>
             <ul>
-              <li>Tekniskt gymnasium – data och mobilutveckling</li>
-              <li>Gymnasiearbete: webbapp för beräkning av BMI och kroppsfett</li>
+              <li>Tekniskt gymnasium med inriktning mot data och mobilutveckling</li>
+              <li>Gymnasiearbete: webbapplikation för beräkning av BMI och kroppsfett</li>
             </ul>
           </div>
         </section>
 
         <section>
           <h2>Arbetslivserfarenhet</h2>
-          <div class="entry">
-            <div class="entry-header">
-              <div>
-                <h3>Produktionsmedarbetare / Gruppledare</h3>
-                <div class="org">Lantchips AB · Enlil Tuncay, Huvudchef · Södertälje</div>
-              </div>
-              <div class="date">2019 – Nuvarande</div>
-            </div>
-            <ul>
-              <li>Anställd sedan 2019 – arbetar kvar parallellt med att söka IT-jobb</li>
-              <li>Gruppledare vid produktionsstation, ansvar och samordning i team</li>
-              <li>Har under åren lärt mig <strong>robotsystem, IT-automation och produktionssystem</strong></li>
-              <li>Praktisk erfarenhet av teknik, system och problemlösning i industrimiljö</li>
-            </ul>
-          </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
                 <h3>Lokalansvarig</h3>
                 <div class="org">Sushi Yama · Nicholas, Chef · Stockholm Central</div>
               </div>
-              <div class="date">Apr 2023 – Maj 2025</div>
+              <div class="date">Apr 2023 – Nuvarande</div>
             </div>
             <ul>
-              <li>Ansvar för kassa, städning och lokalens drift</li>
-              <li>Stödde vid matlagning vid behov</li>
+              <li>Ansvar för kassa, städning och drift av lokalen</li>
+              <li>Stödjer vid matlagning vid behov</li>
             </ul>
           </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -134,8 +311,12 @@
               </div>
               <div class="date">Mar 2020 – Aug 2020</div>
             </div>
-            <ul><li>Proffs- och normalkassa, hjälpte till i olika avdelningar</li></ul>
+            <ul>
+              <li>Arbetade inom proffs- och normalkassa</li>
+              <li>Hjälpte till i olika avdelningar i varuhuset</li>
+            </ul>
           </div>
+
           <div class="entry">
             <div class="entry-header">
               <div>
@@ -144,60 +325,94 @@
               </div>
               <div class="date">Maj 2018 – Jan 2020</div>
             </div>
-            <ul><li>Kassaansvar, städning och gruppledarskap</li></ul>
+            <ul>
+              <li>Kassaansvar, städning och gruppledarskap</li>
+            </ul>
+          </div>
+
+          <div class="entry">
+            <div class="entry-header">
+              <div>
+                <h3>Gruppledare</h3>
+                <div class="org">Lantchips AB · Enlil Tuncay · Södertälje</div>
+              </div>
+              <div class="date">Jan 2018 – Apr 2019</div>
+            </div>
+            <ul>
+              <li>Ledde grupp vid produktionsstation</li>
+              <li>Packning av chips i högt tempo</li>
+            </ul>
           </div>
         </section>
       </div>
 
       <aside class="sidebar">
         <section>
-          <h2>.NET &amp; Kodning</h2>
+          <h2>.NET &amp; Utveckling</h2>
+
           <div class="tag-group">
             <h3>Backend</h3>
             <div class="tags">
-              <span class="tag">C#</span><span class="tag">ASP.NET Core</span>
-              <span class="tag">Web API</span><span class="tag">REST</span>
-              <span class="tag">Entity Framework</span><span class="tag">SQL Server</span>
-              <span class="tag">JWT</span>
+              <span class="tag">C#</span>
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">Web API</span>
+              <span class="tag">REST</span>
+              <span class="tag">Entity Framework Core</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">JWT / Auth</span>
+              <span class="tag">DTO &amp; Services</span>
             </div>
           </div>
+
           <div class="tag-group">
             <h3>Frontend</h3>
             <div class="tags">
-              <span class="tag">React</span><span class="tag">JavaScript</span>
-              <span class="tag">HTML/CSS</span><span class="tag">Bootstrap</span>
+              <span class="tag">React</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Bootstrap</span>
               <span class="tag">ASP.NET MVC</span>
+              <span class="tag">Razor</span>
             </div>
           </div>
+
           <div class="tag-group">
-            <h3>AI</h3>
+            <h3>Verktyg &amp; Övrigt</h3>
             <div class="tags">
-              <span class="tag">AI-assisterad kodning</span>
-              <span class="tag">Prompt engineering</span>
-              <span class="tag">Felsökning med AI</span>
+              <span class="tag">Git / GitHub</span>
+              <span class="tag">Visual Studio</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Agila metoder</span>
+              <span class="tag">API-integration</span>
             </div>
           </div>
         </section>
+
         <section>
-          <h2>Övrigt</h2>
+          <h2>Övriga kompetenser</h2>
           <div class="tags">
-            <span class="tag">Robotsystem</span><span class="tag">IT-automation</span>
-            <span class="tag">Git / GitHub</span><span class="tag">Kreativ problemlösning</span>
-            <span class="tag">Teamarbete</span><span class="tag">IT mjukvara &amp; hårdvara</span>
+            <span class="tag">Kreativ problemlösning</span>
+            <span class="tag">Teamarbete</span>
+            <span class="tag">Ansvarstagande</span>
+            <span class="tag">IT – mjukvara &amp; hårdvara</span>
           </div>
         </section>
+
         <section>
           <h2>Språk</h2>
           <div class="lang-item"><span>Svenska</span><span>Modersmål</span></div>
           <div class="lang-item"><span>Engelska</span><span>God nivå</span></div>
         </section>
+
         <section>
           <h2>Intressen</h2>
           <p class="hobby">
-            Styrketräning, idrott och IT-utveckling. Programmerar på fritiden med egna webb-
-            och appprojekt. Tidigare basketspelare i JKS med ansvar som andrahandstränare.
+            Styrketräning, idrott och IT-utveckling. Programmerar på fritiden med egna webb- och
+            appprojekt. Tidigare basketspelare i JKS med ansvar som andrahandstränare.
           </p>
         </section>
+
         <section>
           <h2>Referenser</h2>
           <p class="ref-note">Lämnas gärna på begäran.</p>

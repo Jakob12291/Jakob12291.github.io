@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jakob Daoud | .NET-utvecklare</title>
-  <meta name="description" content="Portfolio och CV – Jakob Daoud, nyexaminerad .NET-utvecklare." />
+  <meta name="description" content="Portfolio – Jakob Daoud, nyexaminerad .NET-utvecklare." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;650&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -19,24 +19,38 @@
       <a href="cv.html">CV</a>
       <a href="#kontakt">Kontakt</a>
     </div>
-    <a class="nav-github" href="https://github.com/Jakob12291" target="_blank" rel="noopener">GitHub</a>
+    <a class="nav-github" href="https://github.com/Jakob12291" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+      GitHub
+    </a>
   </nav>
 
   <header class="hero">
-    <span class="hero-badge">Nyexaminerad · Söker IT-jobb</span>
-    <h1>Jakob Daoud</h1>
-    <p class="hero-sub">.NET-utvecklare · Backend &amp; Frontend · AI</p>
-    <p class="hero-text">
-      Nyexaminerad från Chas Academy med erfarenhet av fullstack-utveckling i C#, ASP.NET Core och React.
-      Mycket duktig med AI som verktyg i utveckling. Erfarenhet från Lantchips med robotsystem och IT-automation.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="#projekt">Mina projekt</a>
-      <a class="btn btn-outline" href="cv.html">Öppna CV</a>
+    <div>
+      <span class="hero-badge">Nyexaminerad · Söker IT-jobb</span>
+      <h1>Jakob Daoud</h1>
+      <p class="hero-sub">.NET-utvecklare · Backend &amp; Frontend · AI</p>
+      <p class="hero-text">
+        Nyexaminerad från Chas Academy. Bygger REST API:er, MVC-webb och React-appar.
+        Mycket duktig med AI som verktyg. Erfarenhet från Lantchips med robotsystem och IT-automation.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#projekt">Se projekt</a>
+        <a class="btn btn-outline" href="cv.html">Öppna CV</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <pre><code><span class="c-kw">public class</span> <span class="c-type">Developer</span>
+{
+    <span class="c-kw">public string</span> <span class="c-prop">Name</span> => <span class="c-str">"Jakob Daoud"</span>;
+    <span class="c-kw">public string</span> <span class="c-prop">Stack</span> => <span class="c-str">".NET + React"</span>;
+    <span class="c-kw">public string</span> <span class="c-prop">AI</span> => <span class="c-str">"Expert"</span>;
+    <span class="c-kw">public bool</span> <span class="c-prop">OpenToWork</span> => <span class="c-bool">true</span>;
+}</code></pre>
     </div>
   </header>
 
-  <section id="om" class="section section-soft">
+  <section id="om" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Om mig</h2>
       <div class="about-grid">
@@ -47,7 +61,7 @@
           </p>
           <p>
             Utbildad vid <strong>Chas Academy Globen</strong> (2024–2027). Jag är
-            <strong>mycket duktig med AI</strong> och använder det effektivt i kodning och felsökning.
+            <strong>mycket duktig med AI</strong> och använder det dagligen i kodning och felsökning.
           </p>
           <p>
             Jobbar på <strong>Lantchips AB sedan 2019</strong> med robotsystem, IT-automation
@@ -58,7 +72,7 @@
           <div class="card"><div class="card-label">Status</div><div class="card-value">Nyexaminerad</div></div>
           <div class="card"><div class="card-label">Utbildning</div><div class="card-value">Chas Academy – .NET</div></div>
           <div class="card"><div class="card-label">GitHub</div><div class="card-value">github.com/Jakob12291</div></div>
-          <div class="card"><div class="card-label">E-post</div><div class="card-value">jakobi1206@hotmail.com</div></div>
+          <div class="card"><div class="card-label">Portfolio</div><div class="card-value">jakob12291.github.io</div></div>
         </div>
       </div>
     </div>
@@ -85,8 +99,8 @@
         <div class="skill-card">
           <h3>AI &amp; Verktyg</h3>
           <div class="tags">
-            <span>AI-assisterad utveckling</span><span>Git/GitHub</span>
-            <span>Visual Studio</span><span>VS Code</span>
+            <span>AI-assisterad utveckling</span><span>Prompt engineering</span>
+            <span>Git/GitHub</span><span>Visual Studio</span><span>VS Code</span>
           </div>
         </div>
         <div class="skill-card">
@@ -99,34 +113,34 @@
     </div>
   </section>
 
-  <section id="projekt" class="section section-soft">
+  <section id="projekt" class="section section-alt">
     <div class="container">
       <h2 class="section-title">Projekt</h2>
-      <p class="section-lead">Utvalda projekt från utbildningen.</p>
+      <p class="section-lead">Utvalda projekt från utbildningen – se alla på GitHub.</p>
       <div class="projects">
         <article class="project-card featured">
-          <span class="project-tag">Fullstack</span>
+          <span class="project-tag">Fullstack · Examensprojekt</span>
           <h3>Smakbordet – Restaurangsystem</h3>
           <p>REST API, MVC-admin och React SPA med JWT, databas och bokningslogik.</p>
           <div class="tags">
             <span>C#</span><span>ASP.NET Core</span><span>React</span><span>SQL Server</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/Jakob12291/RestaurangBokning" target="_blank" rel="noopener">API</a>
-            <a href="https://github.com/Jakob12291/RestaurangMVC" target="_blank" rel="noopener">MVC</a>
-            <a href="https://github.com/Jakob12291/RestaurangReact" target="_blank" rel="noopener">React</a>
+            <a href="https://github.com/Jakob12291/RestaurangBokning" target="_blank" rel="noopener">API ↗</a>
+            <a href="https://github.com/Jakob12291/RestaurangMVC" target="_blank" rel="noopener">MVC ↗</a>
+            <a href="https://github.com/Jakob12291/RestaurangReact" target="_blank" rel="noopener">React ↗</a>
           </div>
         </article>
         <article class="project-card">
           <span class="project-tag">Praktik</span>
           <h3>HomeBuddy AB</h3>
           <p>E-handel med Next.js och ASP.NET Core API.</p>
-          <a class="project-link" href="https://github.com/Jakob12291/HomeBuddyAb" target="_blank" rel="noopener">GitHub →</a>
+          <a class="project-link" href="https://github.com/Jakob12291/HomeBuddyAb" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
         <article class="project-card">
           <h3>Konsult Swipe</h3>
           <p>TypeScript-webbapp.</p>
-          <a class="project-link" href="https://github.com/Jakob12291/konsult-swipe" target="_blank" rel="noopener">GitHub →</a>
+          <a class="project-link" href="https://github.com/Jakob12291/konsult-swipe" target="_blank" rel="noopener">GitHub ↗</a>
         </article>
       </div>
       <a class="all-repos" href="https://github.com/Jakob12291?tab=repositories" target="_blank" rel="noopener">Alla repos →</a>
@@ -147,7 +161,7 @@
   </section>
 
   <footer class="footer">
-    <p>© 2026 Jakob Daoud</p>
+    <p>© 2026 Jakob Daoud · <a href="https://github.com/Jakob12291">GitHub</a></p>
   </footer>
 </body>
 </html>
